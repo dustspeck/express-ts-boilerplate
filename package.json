@@ -1,0 +1,51 @@
+{
+  "name": "express-ts-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "engines": {
+    "node": ">= 16.13 <17"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.7",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "~16.11.6",
+    "@typescript-eslint/eslint-plugin": "~5.7.0",
+    "@typescript-eslint/parser": "~5.7.0",
+    "eslint": "~8.4.1",
+    "eslint-config-prettier": "~8.3.0",
+    "eslint-plugin-jest": "~25.3.0",
+    "nodemon": "^2.0.15",
+    "prettier": "~2.5.1",
+    "rimraf": "~3.0.2",
+    "tsutils": "~3.21.0",
+    "typescript": "~4.5.3"
+  },
+  "scripts": {
+    "start": "node build/src/main.js",
+    "start:watch": "node ./node_modules/nodemon/bin/nodemon.js",
+    "dev": "nodemon --exec ts-node src/main.ts",
+    "clean": "rimraf coverage build tmp",
+    "prebuild": "npm run lint",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "ajv": "^8.8.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "multer": "^1.4.4",
+    "ts-node": "^10.4.0",
+    "tslib": "~2.3.1"
+  },
+  "volta": {
+    "node": "16.13.0"
+  }
+}
